@@ -1,18 +1,18 @@
-# 🚀 Force1ApiClient - Cliente de API para Integração
+# 🚀 MongoAppClient - Cliente para Integração com MongoDB
 
 ## 📌 Descrição
-Force1ApiClient é um cliente API desenvolvido para interagir com serviços externos, permitindo requisições seguras e eficientes. O projeto fornece exemplos de chamadas GET, POST, PUT e DELETE utilizando autenticação baseada em token.
+MongoAppClient é uma aplicação desenvolvida em C# para interagir com um banco de dados MongoDB. O projeto realiza operações CRUD (criação, leitura, atualização e exclusão) para gerenciar informações de clientes.
 
 ## 🛠️ Tecnologias Utilizadas
 ✅ **C# / .NET 6/7**  
-✅ **HttpClient**  
-✅ **Newtonsoft.Json**  
+✅ **MongoDB**  
+✅ **MongoDB.Driver**  
 
 ## ⚙️ Instalação e Configuração
 ### **1️⃣ Clonar o Repositório**
 ```bash
-git clone https://github.com/seu-usuario/Force1ApiClient.git
-cd Force1ApiClient
+git clone https://github.com/re77sam/Teste3/MongoAppClient.git
+cd MongoAppClient
 ```
 
 ### **2️⃣ Instalar Dependências**
@@ -20,60 +20,50 @@ cd Force1ApiClient
 dotnet restore
 ```
 
-### **3️⃣ Configurar Credenciais (Para Testes)**
-Para autenticação, configure appsettings.json com os valores padrão para testes:
+### **3️⃣ Configurar MongoDB**
+Certifique-se de que MongoDB está rodando na porta padrão 27017:
+```bash
+mongod --dbpath /data/db
+```
+Caso esteja rodando via Docker, execute:
+```bash
+docker-compose up -d
+```
+
+### **4️⃣ Configurar Credenciais (Para Testes)**
+O sistema pode utilizar credenciais padrões para autenticação em endpoints protegidos. No arquivo de configuração (appsettings.json), utilize valores como:
 
 json
 {
-  "ApiBaseUrl": "https://api.exemplo.com",
-  "Auth": {
+  "DatabaseSettings": {
+    "Host": "localhost",
+    "Port": 27017,
     "Username": "testuser",
     "Password": "testpass",
-    "Token": "TEST_API_TOKEN"
+    "DatabaseName": "ClienteDB"
   }
 }
-> Observação: Estes valores são apenas para testes. Em produção, utilize variáveis de ambiente ou um gerenciador de segredos.
+> Observação: Esses valores são apenas para ambientes de teste e devem ser alterados em produção.
 
-### **4️⃣ Executar a Aplicação**
+### **5️⃣ Executar a Aplicação**
 ```bash
 dotnet run
 ```
 
-## 🚀 Endpoints Disponíveis e Exemplos de Uso
-
-### 🔹 Requisição GET (/dados)
-csharp
-var response = await client.GetAsync("https://api.exemplo.com/dados");
-var result = await response.Content.ReadAsStringAsync();
-Console.WriteLine(result);
-
-### 🔹 Requisição POST (/criar)
-csharp
-var content = new StringContent(JsonConvert.SerializeObject(new { Nome = "Teste" }), Encoding.UTF8, "application/json");
-var response = await client.PostAsync("https://api.exemplo.com/criar", content);
-Console.WriteLine(await response.Content.ReadAsStringAsync());
-
-### 🔹 Requisição PUT (/atualizar)
-csharp
-var content = new StringContent(JsonConvert.SerializeObject(new { Nome = "Teste Atualizado" }), Encoding.UTF8, "application/json");
-var response = await client.PutAsync("https://api.exemplo.com/atualizar", content);
-Console.WriteLine(await response.Content.ReadAsStringAsync());
-
-### 🔹 Requisição DELETE (/deletar)
-csharp
-var response = await client.DeleteAsync("https://api.exemplo.com/deletar?id=123");
-Console.WriteLine(await response.Content.ReadAsStringAsync());
+## 🚀 Funcionalidades
+✅ Listar clientes cadastrados
+✅ Adicionar um novo cliente
+✅ Atualizar os dados de um cliente existente
+✅ Excluir um cliente
 
 ## 🔍 Testes e Validação
-- **Postman** → Teste os endpoints com requisições HTTP.
-- **Unit Tests** → Escreva testes para validar o comportamento das chamadas.
-- **Log de Erros** → Utilize Serilog para rastrear falhas e monitorar a execução.
+Utilize ferramentas como Postman para realizar requisições HTTP nos endpoints ou scripts automatizados para validar a funcionalidade.
 
 ## 📌 Melhorias e Expansões
-✅ Suporte para autenticação OAuth2 
-✅ Implementação de rate limiting 
-✅ Cache de respostas para otimização 
-✅ Integração com API de terceiros
+✅ Adicionar autenticação JWT 
+✅ Implementar cache de consultas 
+✅ Monitoramento e logging com Serilog 
+✅ Deploy automatizado com Docker e GitHub Actions
 
 ## 📝 Conclusão
-Force1ApiClient é um cliente leve para consumir APIs externas, proporcionando autenticação segura e chamadas otimizadas. Os valores padrão (testuser / testpass / TEST_API_TOKEN) são recomendados apenas para testes, e devem ser substituídos em ambientes reais. 🚀
+MongoAppClient é um cliente robusto para integração com MongoDB, permitindo um gerenciamento eficiente de dados. Os valores padrão (testuser / testpass) são recomendados apenas para testes e devem ser substituídos em ambientes reais para garantir segurança. 🚀
