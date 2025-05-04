@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "ynUv9qgTGzI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Renan\\Desktop\\Teste Magma\\Teste5\\ApiIntegrationsApp\\ApiIntegrationsApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Renan\\.nuget\\packages\\bouncycastle.cryptography\\2.4.0\\bouncycastle.cryptography.2.4.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\docusign.esign.dll\\8.1.0\\docusign.esign.dll.8.1.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\googlemaps.locationservices\\1.2.0.5\\googlemaps.locationservices.1.2.0.5.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.1\\microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.2.0\\microsoft.identitymodel.abstractions.8.2.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.2.0\\microsoft.identitymodel.jsonwebtokens.8.2.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.identitymodel.logging\\8.2.0\\microsoft.identitymodel.logging.8.2.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.2.0\\microsoft.identitymodel.tokens.8.2.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\Renan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.15\\microsoft.netcore.app.host.win-x64.8.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

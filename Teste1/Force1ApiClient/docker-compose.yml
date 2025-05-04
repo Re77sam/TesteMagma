@@ -1,0 +1,16 @@
+﻿# Define um serviço chamado force1-client para rodar no Docker. 
+# O campo build usa o Dockerfile para construir a aplicação. 
+# restart: always garante que o contêiner será reiniciado automaticamente em caso de falha.
+
+services:
+  force1-client:
+    image: force1-client
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: force1-client-container
+    restart: always
+    volumes:
+      - .:/app
+    environment:
+      - DOTNET_RUNNING_IN_CONTAINER=true

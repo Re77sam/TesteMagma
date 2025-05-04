@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+  api:
+    build: .
+    container_name: mongo_cliente_api
+    ports:
+      - "8080:80"
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo_data:
